@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+
+<body>
+    <header>
+        <h1>Rikyrat Pokédex</h1>
+    </header>
+
+    <!-- Tab navigation -->
+       <div class="bottom-nav">
+        <button class="tab-link active" data-tab="viewPokemon">View Pokémon</button>
+        <button class="tab-link" data-tab="addPokemon">Add Pokémon</button>
+    </div>
+    <!-- View Pokémon Content -->
+    <div id="viewPokemon" class="tab-content active">
+        <div id="pokemonList" class="pokemon-list"></div>
+    </div>
+
+    <!-- Add Pokémon Content -->
+    <div id="addPokemon" class="tab-content">
+        <h2 id="formTitle">Add Pokémon</h2>
+        <form id="pokemonForm">
+            <label for="pokemonName">Name:</label>
+            <input type="text" id="pokemonName" required>
+
+            <label for="dexNumber">Dex Number:</label>
+            <input type="number" id="dexNumber" required>
+
+            <label for="pokemonImage">Image URL:</label>
+            <input type="text" id="pokemonImage" required>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" required>
+
+            <label for="type1">Type 1:</label>
+            <select id="type1" required class="type-select"></select>
+
+            <label for="type2">Type 2:</label>
+            <select id="type2" class="type-select"></select>
+
+            <label for="type3">Type 3:</label>
+            <select id="type3" class="type-select"></select>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" required>
+
+            <label for="rarity">Rarity:</label>
+            <select id="rarity" required class="rarity-select"></select>
+
+            <label for="growthRate">Growth Rate:</label>
+            <select id="growthRate" required></select>
+
+            <label for="strongAgainst">Strong Points:</label>
+            <input type="text" id="strongAgainst">
+
+            <label for="weakAgainst">Weaknesses:</label>
+            <input type="text" id="weakAgainst">
+
+            <button type="submit" class="btn">Save Pokémon</button>
+        </form>
+    </div>
+
+    <!-- Modal for Pokémon details -->
+    <div id="pokemonDetailModal" class="modal">
+        <div class="modal-content" id="pokemonDetailContent">
+            <span class="close">X</span> <!-- X for closing the modal -->
+            <!-- Content will be injected here -->
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast"></div>
+
+    
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
